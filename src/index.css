@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kajiro&display=swap');
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+/* In your global CSS or index.css */
+
+/* Spark keyframes: rotating glow around the input */
+/* Moving spark keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease forwards;
+}
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+/*favicon*/
+::selection {
+  background: #00bcd4; /* selection background */
+  color: white;        /* selected text color */
+}
+
+/* For Firefox */
+::-moz-selection {
+  background: #00bcd4;
+  color: white;
+}

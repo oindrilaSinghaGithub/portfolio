@@ -1,0 +1,38 @@
+.spark-field {
+  position: relative;
+  width: 100%;
+}
+
+.spark-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #444; /* default gray underline */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Blue gradient underline effect */
+.spark-input:focus,
+.spark-input:hover {
+  border-color: transparent; /* hide the default solid line */
+}
+
+.spark-input:focus ~ .underline,
+.spark-input:hover ~ .underline {
+  width: 100%;
+}
+
+/* Animated underline */
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: width 0.4s ease;
+}
